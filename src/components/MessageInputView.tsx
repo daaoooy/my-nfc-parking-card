@@ -25,27 +25,31 @@ const MessageInputView = ({
     <motion.div
       key="message"
       {...framerSlideIn}
-      className="w-full max-w-xs flex flex-col gap-4"
+      className="w-full max-w-xs flex flex-col gap-4 px-4 pb-26"
     >
-      <div className="flex items-center gap-2">
-        <Button variant="ghost" size="icon" onClick={onBack}>
-          <ArrowLeft />
+      <div className="flex items-center text-center gap-2">
+        <Button
+          variant="outline"
+          onClick={onBack}
+          className="rounded-full border-gray-200 text-muted-foreground"
+        >
+          <ArrowLeft /> 뒤로
         </Button>
-        <h3>메시지 작성</h3>
+        <h3>메시지를 작성해주세요</h3>
       </div>
 
       <Textarea
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        placeholder="원하는 메세지를 입력해주세요."
-        className="min-h-38"
+        placeholder="원하는 메세지를 작성 후 보내기를 누르면 메세지 창으로 이동합니다."
+        className="min-h-40 placeholder:text-sm"
         autoFocus
       />
 
       <Button
         onClick={() => onSend()}
         disabled={!message.trim()}
-        className="w-full gap-2 py-5"
+        className="w-full gap-2 py-5 bg-[#23201e] dark:bg-[#fff9e9]"
       >
         <Send size={16} /> 보내기
       </Button>
@@ -54,7 +58,11 @@ const MessageInputView = ({
         <p className="text-xs text-gray-400">작성 없이 기본 메세지 보내기</p>
         <ButtonGroup>
           {QUICK_MESSAGES.map((msg) => (
-            <Button key={msg.label} onClick={() => onSend(msg.text)}>
+            <Button
+              className="bg-[#23201e] dark:bg-[#fff9e9] text-sm md:text-md"
+              key={msg.label}
+              onClick={() => onSend(msg.text)}
+            >
               {msg.label}
             </Button>
           ))}
