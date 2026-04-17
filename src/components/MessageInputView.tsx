@@ -43,7 +43,6 @@ const MessageInputView = ({
         onChange={(e) => setMessage(e.target.value)}
         placeholder="원하는 메세지를 작성하세요."
         className="h-45 resize-none placeholder:text-sm"
-        autoFocus
       />
 
       <Button
