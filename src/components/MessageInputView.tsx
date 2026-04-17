@@ -25,7 +25,7 @@ const MessageInputView = ({
     <motion.div
       key="message"
       {...framerSlideIn}
-      className="w-full max-w-xs flex flex-col gap-4 px-3"
+      className="w-full flex flex-col gap-4"
     >
       <div className="flex items-center text-center gap-2">
         <Button
@@ -35,14 +35,14 @@ const MessageInputView = ({
         >
           <ArrowLeft /> 뒤로
         </Button>
-        <h3>메시지를 작성해주세요</h3>
+        <h3>메세지로 연락하기</h3>
       </div>
 
       <Textarea
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        placeholder="원하는 메세지를 작성 후 보내기를 누르면 메세지 창으로 이동합니다."
-        className="min-h-42 placeholder:text-sm"
+        placeholder="원하는 메세지를 작성하세요."
+        className="h-45 resize-none placeholder:text-sm"
         autoFocus
       />
 
