@@ -13,7 +13,7 @@ const ThemeToggle = ({ dark, toggleTheme }: ThemeToggleProps) => {
       <div
         className={cn(
           "relative w-16 h-8 flex items-center rounded-full px-1.5 transition-colors duration-500",
-          dark ? "bg-gray-800" : "bg-gray-300",
+          dark ? "bg-[#23201e]" : "bg-[#7e7874]",
         )}
       >
         <div className="absolute inset-0 flex items-center justify-between px-2 text-white/50">
