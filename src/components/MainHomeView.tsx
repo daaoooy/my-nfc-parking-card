@@ -23,7 +23,7 @@ const MainHomeView = ({
     <motion.div
       key="main"
       {...framerFadeUp}
-      className="flex flex-col items-center gap-4 text-center"
+      className="flex flex-col items-center gap-4 text-center pb-6 md:pb-12"
     >
       <h2>차주에게 연락이 필요하신가요?</h2>
       <p className="text-sm text-muted-foreground">
@@ -32,10 +32,10 @@ const MainHomeView = ({
 
       <div
         className={cn(
-          "transition-transform duration-6000 ease-linear",
+          "transition-transform duration-5000 ease-out",
           start
             ? "translate-x-0 translate-y-0 scale-100"
-            : "translate-x-160 -translate-y-140 scale-10",
+            : "translate-x-180 -translate-y-140 scale-10",
         )}
       >
         <img
