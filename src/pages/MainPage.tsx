@@ -21,8 +21,10 @@ const MainPage = () => {
   } = useContact();
 
   return (
-    <div className="flex flex-col h-screen items-center justify-center overflow-hidden p-6 relative">
-      <ThemeToggle dark={dark} toggleTheme={toggleTheme} />
+    <div className="flex flex-col h-screen items-center justify-between p-2 relative overflow-hidden">
+      <div className="h-10 w-full flex justify-start pb-7 md:pb-3">
+        <ThemeToggle dark={dark} toggleTheme={toggleTheme} />
+      </div>
 
       <AnimatePresence mode="wait">
         {!isMessaging ? (
